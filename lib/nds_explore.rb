@@ -18,10 +18,11 @@ def print_first_directors_movie_titles
   #end
 
   row_index = 0
+  director_array = []
   while row_index < directors_database[0].length do
-    print nds[0][:movies][:title] + "\n"
+    director_array.push(directors_database[0][:movies][:title] + "\n")
     row_index += 1
   end
 
-  directors_database[0]
+  return directors_database
 end
