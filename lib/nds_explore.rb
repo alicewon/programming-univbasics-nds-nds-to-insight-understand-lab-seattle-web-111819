@@ -11,18 +11,13 @@ end
 
 def print_first_directors_movie_titles
 
-  #print_first_directors_movie_titles.join(/n)
-  #row_index = 0
-  #while row_index < directors_database.length do
-  #  puts "Row #{row_index}"
-  #end
-
   row_index = 0
-  director_array = []
-  while row_index < directors_database[0].length do
-    director_array.push(directors_database[0][:movies][:title] + "\n")
-    row_index += 1
+  first_directors_movies = directors_database[0][:movies]
+  while row_index < first_directors_movies.length do
+    movie = first_directors_movies[row_index]
+    movie_title = movie[:title] 
+    puts movie_title
+    
+    row_index += 1 
   end
-
-  return director_array
 end
